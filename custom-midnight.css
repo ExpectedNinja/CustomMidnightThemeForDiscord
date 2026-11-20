@@ -28,8 +28,7 @@
     [class*="themedBackground_"],
     [class*="inner_"],
     [class*="textArea_"],
-    [class*="slateContainer_"],
-    [class*="slateTextArea_"]
+    [class*="slateContainer_"]
 ) {
     --channeltextarea-background: var(--background-base-lowest);
     background: var(--background-base-lowest) !important;
@@ -40,6 +39,18 @@
     border: 1px solid #222226 !important;
     border-radius: 8px !important;
     background-clip: padding-box !important;
+}
+
+/* Keep typed text and placeholder readable */
+[class*="slateTextArea_"],
+[class*="editor_"],
+[data-slate-editor="true"] {
+    color: var(--text-default, #f2f3f5) !important;
+}
+
+[data-slate-placeholder="true"],
+[class*="placeholder_"] {
+    color: var(--text-muted, #949ba4) !important;
 }
 
 /* Profile Popout & Cards (Updated Visual Refresh / Profile Redesign Hashes) */
