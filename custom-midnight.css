@@ -46,11 +46,14 @@
 [class*="editor_"],
 [data-slate-editor="true"] {
     color: var(--text-default, #f2f3f5) !important;
+    -webkit-text-fill-color: var(--text-default, #f2f3f5) !important;
 }
 
-[data-slate-placeholder="true"],
-[class*="placeholder_"] {
+[class*="slateTextArea_"][data-slate-placeholder="true"],
+div[class*="placeholder_"][data-slate-placeholder="true"] {
     color: var(--text-muted, #949ba4) !important;
+    -webkit-text-fill-color: var(--text-muted, #949ba4) !important;
+    opacity: 1 !important;
 }
 
 /* Profile Popout & Cards (Updated Visual Refresh / Profile Redesign Hashes) */
