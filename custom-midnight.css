@@ -2,7 +2,7 @@
  * @name Custom Midnight Overrides
  * @author ExpectedNinja
  * @version 1.0.0
- * @description Custom dark/AMOLED UI tweaks, context menu fixes, and compact header overrides.
+ * @description Custom dark/AMOLED UI tweaks, context menu fixes, profile popout fixes, and compact header overrides.
  */
 
 /* Context Menu (Channel Actions, Right-Click Menus, etc.) */
@@ -22,8 +22,28 @@
     border-color: #222226;
 }
 
+/* Profile Popout & Cards (Updated Visual Refresh / Profile Redesign Hashes) */
+.inner_P1YEjQ,
+.inner_P1YEjQ .scrollerFade_S_xUx6,
 .user-profile-modal .inner_c0bea0 {
-    background: var(--background-base-lowest);
+    background: var(--background-base-lowest) !important;
+}
+
+.inner_P1YEjQ .overlay_P1YEjQ,
+.inner_P1YEjQ .card_M2WrKU,
+.inner_P1YEjQ .container_78NJ3W,
+.card_b32ca4,
+.overlay_b32ca4,
+.card__39ec2 {
+    background: var(--background-base-lowest) !important;
+    border: 1px solid #222226;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+
+.inner_P1YEjQ .redesignFooter_YBm90d {
+    background: var(--background-base-low) !important;
+    border-top: 1px solid #222226;
 }
 
 .themeContainer_ce8328>div, .menuOverlay_ce8328 {
@@ -41,10 +61,6 @@
     background: var(--background-base-lowest);
 }
 
-.card_b32ca4, .overlay_b32ca4 {
-    background: var(--background-base-lowest);
-}
-
 .section__1f6ca {
     background: var(--background-base-low);
     border: 1px solid #222226;
@@ -57,13 +73,6 @@
 }
 
 .user-profile-popout, .inner_c0bea0 {
-    background: var(--background-base-lowest);
-    border: 1px solid #222226;
-    border-radius: 8px;
-    background-clip: padding-box;
-}
-
-.card__39ec2 {
     background: var(--background-base-lowest);
     border: 1px solid #222226;
     border-radius: 8px;
