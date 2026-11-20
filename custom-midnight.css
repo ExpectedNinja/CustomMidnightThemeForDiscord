@@ -1,0 +1,262 @@
+/**
+ * @name Custom Midnight Theme
+ * @author ExpectedNinja
+ * @version 1.0.0
+ * @description Custom dark/AMOLED theme overrides for Discord and Equicord/Vencord.
+ */
+
+@import url("https://raw.githubusercontent.com/LuckFire/amoled-cord/refs/heads/main/src/amoled-cord.css");
+@import url("https://raw.codeberg.page/AllPurposeMat/Disblock-Origin/DisblockOrigin.theme.css");
+
+/* Context Menu (Channel Actions, Right-Click Menus, etc.) */
+.menu_M3qk4j {
+    background: var(--background-base-lowest) !important;
+    border: 1px solid #222226;
+    border-radius: 8px;
+}
+
+.menu_M3qk4j .scroller_M3qk4j {
+    background: var(--background-base-lowest) !important;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+
+.menu_M3qk4j .separator_M3qk4j {
+    border-color: #222226;
+}
+
+.user-profile-modal .inner_c0bea0 {
+    background: var(--background-base-lowest);
+}
+
+.themeContainer_ce8328>div, .menuOverlay_ce8328 {
+    background: var(--background-base-lowest);
+}
+
+:where(.visual-refresh) .scroller_c1e9c4 {
+    background: var(--background-base-lowest);
+    border: 1px solid #222226;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+
+.user-profile-sidebar {
+    background: var(--background-base-lowest);
+}
+
+.card_b32ca4, .overlay_b32ca4 {
+    background: var(--background-base-lowest);
+}
+
+.section__1f6ca {
+    background: var(--background-base-low);
+    border: 1px solid #222226;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+
+.divider__3b260, .overlay__3b260 {
+    background: var(--background-base-lowest);
+}
+
+.user-profile-popout, .inner_c0bea0 {
+    background: var(--background-base-lowest);
+    border: 1px solid #222226;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+
+.card__39ec2 {
+    background: var(--background-base-lowest);
+    border: 1px solid #222226;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+ 
+.visual-refresh .grid__623de {
+    background: var(--background-base-lowest);
+}
+
+.visual-refresh .wrapper_d5f3cd {
+    background-color: var(--background-base-low);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+}
+
+.gradientBackground__11664 {
+    background-color: none;
+}
+
+.visual-refresh .channelAppLauncher_e6e74f {
+    display: flex;
+}
+
+div[class*="childContainer__"][class*="nameplated__"] {
+	padding-right: inherit;
+	& > div[class*="container__"][style] {
+		display: none;
+	}
+}
+
+li[class*="channel__"] > div[class*="interactive__"] > div[class*="container__"]:is([class*="fadeIn__"], :has(> div[class*="videoContainer__"])) {
+	display: none;
+}
+
+[class*="closeButtonPlated__"] {
+	opacity: 0.7;
+	[class*="innerCloseButtonPlated"] {
+		background-color: transparent;
+	}
+}
+
+.visual-refresh .notice__6e2b9 {
+    background: var(--background-base-lowest);
+}
+
+.theme-midnight .background__7449f {
+    background-color: var(--background-base-lowest);
+}
+
+.profile__9c3be {
+    background: var(--background-base-low);
+}
+
+.inner_ab8609 {
+    background: var(--background-base-lowest);
+}
+
+.container__53cea .size-md__53cea .padding-size-sm__53cea {
+    opacity: 1;
+    transform: scale(1);
+    background-color: var(--background-base-lowest);
+}
+
+.container__7d20c {
+    background: var(--background-gradient-lowest, var(--background-base-lowest));
+}
+
+/* Compact / Hide Visual Refresh Title Bar */ 
+.visual-refresh {
+    --vr-header-snippet-top: 0px;
+    --vr-header-snippet-server-padding: 16px;
+    --vr-header-snippet-space: 261px;
+    --vr-header-snippet-button-padding: 4px;
+    --vr-header-snippet-winbuttons: flex;
+
+    div.chat_f75fb0:not(.threadSidebarOpen_f75fb0),
+    main.container__133bf,
+    div.chatLayerWrapper__01ae2 {
+        & section.container__9293f {
+            padding-right: var(--vr-header-snippet-space);
+        }
+    }
+
+    div.base_c48ade {
+        grid-template-rows: [top] 0 [titleBarEnd] min-content [noticeEnd] 1fr [contentEnd] min-content [end];
+
+        &:has(div.bar_c38106 > div.trailing_c38106 .updateIconForeground__49676) {
+            & div.chat_f75fb0,
+            & div.subtitleContainer_f75fb0,
+            & main.container__133bf,
+            & div.chatLayerWrapper__01ae2 {
+                & section.container__9293f {
+                    padding-right: calc(var(--vr-header-snippet-space) + 50px);
+                }
+            }
+
+            & div.videoControls_bfe55a .topControls_bfe55a div.toolbar__9293f {
+                margin-right: calc(var(--vr-header-snippet-space) + 30px) !important;
+            }
+        }
+
+        & > div.content_c48ade {
+            z-index: 0;
+        }
+
+        & > div.bar_c38106 {
+            position: absolute;
+            top: var(--vr-header-snippet-top);
+            right: anchor(right);
+            width: anchor-size(width);
+            padding: 0 var(--vr-header-snippet-button-padding) 0 0;
+
+            & > .title_c38106 {
+                display: none;
+            }
+        }
+
+        &:has(> .notice__6e2b9) {
+            & > div.bar_c38106 {
+                top: anchor(top);
+            }
+        }
+
+        & div.trailing_c38106 {
+            background: none;
+            border: none;
+            height: var(--custom-channel-header-height);
+        }
+
+        &:has(.threadSidebarOpen_f75fb0.threadSidebarFloating_f75fb0) > .bar_c38106 {
+            z-index: 0;
+        }
+    }
+
+    :not(:has(div.page_c48ade > div.chat_f75fb0)) div.base_c48ade > div.bar_c38106 {
+        right: 0 !important;
+    }
+
+    ul[data-list-id="guildsnav"] > div.itemsContainer_ef3116 > div.stack_dbd263 {
+        margin-top: var(--vr-header-snippet-server-padding);
+    }
+}
+
+.searchBar__1ac1c {
+  margin-top: 90px;
+  position: absolute;
+}
+
+.selector__25a09 {
+    display: none;
+    align-self: stretch;
+}
+
+.root__175e2 {
+    display: none;
+}
+
+.content__49fc1 .content__7f727 .thin_d125d2 .scrollerBase_d125d2 {
+    background: var(--background-base-low);
+}
+
+.footerContent__7f727 {
+    background: var(--background-base-low);
+}
+
+.container_dca174 {
+    background: var(--background-base-low);
+}
+
+.button__85643.iconWrapper__9293f.clickable__9293f[aria-label="Checkpoint"] {
+  display: none;
+}
+
+.container__8a031 .size-xl__8a031 .padding-size-sm__8a031 {
+    background: var(--background-base-low);
+}
+
+#vc-spotify-song-title {
+    color: #fff;
+}
+
+.vc-shiki-root .vc-shiki-code {
+    background: #000;
+}
+
+.divider-2rZFJK {
+    --divider-color: var(--neon-yellow-color) !important;
+}
+
+.vc-special-card-dark {
+    display: none;
+}
