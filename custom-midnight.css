@@ -2,7 +2,7 @@
  * @name Custom Midnight Overrides
  * @author ExpectedNinja
  * @version 1.0.0
- * @description Custom dark/AMOLED UI tweaks, context menu fixes, profile popout fixes, and compact header overrides.
+ * @description Custom dark/AMOLED UI tweaks, context menu fixes, profile popout fixes, chat input fixes, and compact header overrides.
  */
 
 /* Context Menu (Channel Actions, Right-Click Menus, etc.) */
@@ -20,6 +20,20 @@
 
 .menu_M3qk4j .separator_M3qk4j {
     border-color: #222226;
+}
+
+/* Chat Input Box (Channels, Threads, Forum Posts, DMs) */
+.scrollableContainer_2x8-Qn,
+.themedBackground_2x8-Qn,
+.inner_2x8-Qn {
+    background: var(--background-base-lowest) !important;
+    background-color: var(--background-base-lowest) !important;
+}
+
+.scrollableContainer_2x8-Qn {
+    border: 1px solid #222226;
+    border-radius: 8px;
+    background-clip: padding-box;
 }
 
 /* Profile Popout & Cards (Updated Visual Refresh / Profile Redesign Hashes) */
