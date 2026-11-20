@@ -23,36 +23,40 @@
 }
 
 /* Chat Input Box (Channels, Threads, Forum Posts, DMs) */
-:is(
-    [class*="scrollableContainer_"],
-    [class*="themedBackground_"],
-    [class*="inner_"],
-    [class*="textArea_"],
-    [class*="slateContainer_"]
-) {
+.scrollableContainer_2x8-Qn,
+.themedBackground_2x8-Qn,
+.inner_2x8-Qn,
+.textArea_2x8-Qn,
+.slateContainer_q99V_- {
     --channeltextarea-background: var(--background-base-lowest);
     background: var(--background-base-lowest) !important;
     background-color: var(--background-base-lowest) !important;
 }
 
-[class*="scrollableContainer_"] {
+.scrollableContainer_2x8-Qn {
     border: 1px solid #222226 !important;
     border-radius: 8px !important;
     background-clip: padding-box !important;
 }
 
-/* Keep typed text and placeholder readable */
-[class*="slateTextArea_"],
-[class*="editor_"],
-[data-slate-editor="true"] {
-    color: var(--text-default, #f2f3f5) !important;
-    -webkit-text-fill-color: var(--text-default, #f2f3f5) !important;
+/* Ensure the editor layer on top of the placeholder stays transparent */
+.editor_SHcSVi,
+.slateTextArea_q99V_- {
+    background: transparent !important;
+    background-color: transparent !important;
 }
 
-[class*="slateTextArea_"][data-slate-placeholder="true"],
-div[class*="placeholder_"][data-slate-placeholder="true"] {
-    color: var(--text-muted, #949ba4) !important;
-    -webkit-text-fill-color: var(--text-muted, #949ba4) !important;
+/* Typed text and placeholder colors */
+.editor_SHcSVi,
+[data-slate-editor="true"] {
+    color: #f2f3f5 !important;
+    -webkit-text-fill-color: #f2f3f5 !important;
+}
+
+.placeholder_SHcSVi,
+[data-slate-placeholder="true"] {
+    color: #80848e !important;
+    -webkit-text-fill-color: #80848e !important;
     opacity: 1 !important;
 }
 
