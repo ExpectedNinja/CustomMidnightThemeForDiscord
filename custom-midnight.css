@@ -23,17 +23,23 @@
 }
 
 /* Chat Input Box (Channels, Threads, Forum Posts, DMs) */
-.scrollableContainer_2x8-Qn,
-.themedBackground_2x8-Qn,
-.inner_2x8-Qn {
+:is(
+    [class*="scrollableContainer_"],
+    [class*="themedBackground_"],
+    [class*="inner_"],
+    [class*="textArea_"],
+    [class*="slateContainer_"],
+    [class*="slateTextArea_"]
+) {
+    --channeltextarea-background: var(--background-base-lowest);
     background: var(--background-base-lowest) !important;
     background-color: var(--background-base-lowest) !important;
 }
 
-.scrollableContainer_2x8-Qn {
-    border: 1px solid #222226;
-    border-radius: 8px;
-    background-clip: padding-box;
+[class*="scrollableContainer_"] {
+    border: 1px solid #222226 !important;
+    border-radius: 8px !important;
+    background-clip: padding-box !important;
 }
 
 /* Profile Popout & Cards (Updated Visual Refresh / Profile Redesign Hashes) */
